@@ -1,0 +1,482 @@
+body{
+    font-family: 'Ubuntu', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+/* #################################################################################################### */
+/* Index page */
+/* #################################################################################################### */
+
+/* For Home navigationBar */
+.navbar{
+    padding: 10px 0;
+}
+.navbar-brand{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: #262626;
+}
+.nav-item{
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.navbar-light .navbar-nav .nav-item .nav-link:hover,
+.navbar-light .navbar-nav .nav-item.active .nav-link{
+    background: #262626;
+    color: #fff;	
+}
+.navbar-light .navbar-nav .nav-item .nav-link{
+    color: #262626;
+    padding: 5px 15px;
+}
+
+
+
+
+/* Header section start */
+
+#header{
+    width: 100%;
+    height: 80vh;
+    margin-top: 110px;
+}
+#header h1{
+    margin: 0 0 10px 0;
+    font-size: 38px;
+    font-weight: 700;
+    color:black;
+}
+#header .brand-name{
+    color: #3498db;
+}
+#header h2{
+    color: #484848;
+    font-size: 24px;
+}
+#header .btn-get-started{
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 8px 25px;
+    /* border-radius: 50px; */
+    transition: 0.5s;
+    color: black;
+    border: 0.5px solid black;
+    text-decoration: none;
+}
+#header .btn-get-started:hover{
+    background: black;
+    color: #fff;
+}
+.header-img{
+    text-align: right;
+}
+#header .animated{
+    animation:up-down 2s ease-in-out infinite alternate-reverse both;
+}
+@-webkit-keyframes up-down{
+    0%{
+        transform: translateX(15px);
+    }
+    100%{
+        transform: translateX(-15px);
+    }
+}
+@keyframes up-down{
+    0%{
+        transform: translateX(15px);
+    }
+    100%{
+        transform: translateX(-15px);
+    }
+}
+
+/* header section end */
+
+
+/* Product Section Start  */
+
+
+.productSection .img-box {
+	height: 160px;
+	width: 100%;
+	position: relative;
+}
+.productSection img {	
+	max-width: 100%;
+	max-height: 100%;
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+}
+.productSection h4 {
+	font-size: 18px;
+	margin: 10px 0;
+}
+.productSection .btn {
+	color: #333;
+	border-radius: 0;
+	font-size: 11px;
+	text-transform: uppercase;
+	font-weight: bold;
+	background: none;
+	border: 1px solid #ccc;
+	padding: 5px 10px;
+	margin-top: 5px;
+	line-height: 16px;
+}
+.productSection .btn:focus {
+	color: #fff;
+	background: #000;
+	border-color: #000;
+	box-shadow: none;
+}
+.productSection .btn i {
+	font-size: 14px;
+	font-weight: bold;
+	margin-left: 5px;
+}
+.productSection .thumb-wrapper {
+	text-align: center;
+}
+.productSection .thumb-content {
+	padding: 15px;
+}
+.productSection .item-price {
+	font-size: 13px;
+	padding: 2px 0;
+}
+.productSection .item-price strike {
+	color: #999;
+	margin-right: 5px;
+}
+.productSection .item-price span {
+	color: #86bd57;
+	font-size: 110%;
+}	
+.productSection li.active {
+	width: 10px;
+	height: 10px;
+	margin: 4px;
+	border-radius: 50%;
+	border-color: transparent;
+	border: none;
+}
+.productSection-indicators li.active {	
+	background: rgba(0, 0, 0, 0.6);
+}
+.star-rating li {
+	padding: 0;
+}
+.star-rating i {
+	font-size: 14px;
+	color: #ffc000;
+}
+
+
+/* Product Section EnD */
+
+
+/* #################################################################################################### */
+/* Cart page */
+/* #################################################################################################### */
+
+.emptycart .card {
+    margin-bottom: 10px !important;
+    border: 0;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    letter-spacing: .5px;
+    border-radius: 8px;
+    -webkit-box-shadow: 1px 5px 24px 0 rgba(68, 103, 242, 0.123);
+    box-shadow: 1px 5px 24px 0 rgba(68, 103, 242, 0.116)
+}
+
+.emptycart .card .card-header {
+    background-color: #fff;
+    border-bottom: none;
+    padding: 24px;
+    border-bottom: 1px solid #f6f7fb;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px
+}
+
+.emptycart .card-header:first-child {
+    border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0
+}
+
+.emptycart .card .card-body {
+    padding: 30px;
+    background-color: transparent
+}
+
+.emptycart .btn-continueshop {
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 8px 25px;
+    /* border-radius: 50px; */
+    transition: 0.5s;
+    color: black;
+    border: 0.5px solid black;
+    text-decoration: none;
+}
+
+.emptycart .btn-continueshop:hover{
+    background: black;
+    color: #fff;
+}
+
+/* Address filed cart */
+.address_cart_row{
+    padding-bottom: 50px;
+    width: 100%;
+      
+}
+.form_cart_address{
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: 40px;
+}
+.form_cart_address .form-control{
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    border-color: black !important;
+    border-style: solid !important;
+    border-width: 0 0 1px 0 !important;
+    padding: 0px !important;
+    color: #495057;
+    height: auto;
+    border-radius: 0;
+    background-color: white;
+    background-clip: padding-box;
+}
+.form_cart_address .form-control:focus{
+    color: black;
+    background-color: white;
+    border-color: #00ac96 !important;
+    outline: 0;
+    box-shadow: none;
+}
+.btn_addressSubmit_cart {
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 8px 25px;
+    /* border-radius: 50px; */
+    transition: 0.5s;
+    color: black;
+    border: 0.5px solid black;
+    text-decoration: none;
+}
+.btn_addressSubmit_cart:hover{
+    background: black;
+    color: #fff;
+}
+
+
+/* #################################################################################################### */
+/* LOGIN page */
+/* #################################################################################################### */
+
+.login_container {
+    min-height: 80vh;
+    /* background-color: #c7a7fa; */
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.login_container .card{
+    border-radius: 15px;
+    padding: 20px;
+}
+/* .login_container .main {
+    height: 410px;
+    width: 320px;
+    background-color: #fff;
+    border-radius: 10px !important;
+    padding: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif
+} */
+
+.login_container .image {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.login_container .image span {
+    height: 70px;
+    width: 70px;
+    border: 1px solid #86b0da;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden
+}
+
+.login_container .image span img {
+    width: 90%;
+    object-fit: cover
+}
+.login_container .heading h3 {
+    font-size: 18px
+}
+
+.login_container .heading p {
+    font-size: 13px;
+    font-weight: 700
+}
+
+.login_container .heading p a {
+    text-decoration: none;
+    color: blue
+}
+.login_container .input-text {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 0 20px
+}
+
+.login_container input{
+    height: 35px;
+    width: 100%;
+    border-radius: 20px;
+    padding: 0 20px;
+    border: none;
+    outline: 0;
+    background-color: #f3f3f3
+}
+
+.login_container .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 0 20px;
+    gap: 10px
+}
+
+.login_container .button button {
+    height: 35px;
+    width: 100%;
+    border-radius: 20px;
+    border: none;
+    outline: 0;
+    background-color: #a8729a;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer
+}
+
+
+
+
+/* #################################################################################################### */
+/* Register page */
+/* #################################################################################################### */
+
+
+.register_container  {
+    min-height: 80vh;
+    /* background-color: #c7a7fa; */
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.register_container  .card{
+    border-radius: 15px;
+    padding: 20px;
+}
+.register_container  .image {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.register_container  .image span {
+    height: 70px;
+    width: 70px;
+    border: 1px solid #86b0da;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden
+}
+
+.register_container  .image span img {
+    width: 90%;
+    object-fit: cover
+}
+.register_container  .heading h3 {
+    font-size: 18px
+}
+
+.register_container  .heading p {
+    font-size: 13px;
+    font-weight: 700
+}
+
+.register_container  .heading p a {
+    text-decoration: none;
+    color: blue
+}
+.register_container  .input-text {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 0 20px
+}
+
+.register_container  input{
+    height: 35px;
+    width: 100%;
+    border-radius: 20px;
+    padding: 0 20px;
+    border: none;
+    outline: 0;
+    background-color: #f3f3f3
+}
+
+.register_container  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 0 20px;
+    gap: 10px
+}
+
+.register_container .button button {
+    height: 35px;
+    width: 100%;
+    border-radius: 20px;
+    border: none;
+    outline: 0;
+    background-color: #a8729a;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer
+}

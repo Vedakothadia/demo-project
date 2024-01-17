@@ -1,0 +1,125 @@
+<section class="cart">
+
+    <% if(session.cart) { %>
+        <!-- For CArt page -->
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-lg-10 col-xl-8">
+                    <div class="card" style="border-radius: 10px;">
+                        <div class="card-header px-4 py-5">
+                            <h5 class="text-muted mb-0">Thanks for your Order, <span
+                                    style="color: #a8729a;">User</span>!
+                            </h5>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <p class="lead fw-normal mb-0" style="color: #a8729a;">Receipt</p>
+                            </div>
+                            <div class="card shadow-0 border mb-4">
+                                <div class="card-body">
+
+
+                                    <% for(let cakes of Object.values(session.cart.items)) { %>
+
+
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <img src="img/<%= cakes.items.image %>" class="img-fluid" alt="Cake">
+                                            </div>
+                                            <div
+                                                class="col-md-2 text-center d-flex justify-content-center align-items-center">
+                                                <p class="text-muted mb-0">
+                                                    <%= cakes.items.name %>
+                                                </p>
+                                            </div>
+                                            <div
+                                                class="col-md-2 text-center d-flex justify-content-center align-items-center">
+                                                <p class="text-muted mb-0 small">
+                                                    <%= cakes.items.size %>
+                                                </p>
+                                            </div>
+                                            <div
+                                                class="col-md-2 text-center d-flex justify-content-center align-items-center">
+                                                <p class="text-muted mb-0 small">Qty: <%= cakes.qty %>
+                                                </p>
+                                            </div>
+                                            <!-- <div
+                                            class="col-md-2 text-center d-flex justify-content-center align-items-center">
+                                            <p class="text-muted mb-0 small">GST Included</p>
+                                        </div> -->
+                                            <div
+                                                class="col-md-2 text-center d-flex justify-content-center align-items-center">
+                                                <p class="text-muted mb-0 small">₹<%= cakes.qty * cakes.items.price %>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <hr class="mb-4" style="background-color: #e0e0e0; opacity: 1;">
+
+                                        <% } %>
+
+
+                                </div>
+                            </div>
+                            <div class="card-footer border-0 px-4 py-5"
+                                style="background-color: #a8729a; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
+                                <h5
+                                    class="d-flex align-items-center justify-content-end text-white text-uppercase mb-0">
+                                    Total paid: <span class="h2 mb-0 ms-2"> &nbsp;₹<%= session.cart.totalPrice %></span>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row address_cart_row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4 mb-3">
+                    <% if(user){ %>
+                        <form class="form_cart_address" action="/orders" method="POST">
+                            <div class="form-group >
+                        <label for=" contact_mobile">Mobile No<span style="color: red">*</span></label>
+                                <input type="text" name="phone" class="form-control" />
+                                <span></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="address_cart">Your Address<span style="color: red">*</span></label>
+                                <textarea name="address" rows="2" class="form-control"></textarea>
+                                <span></span>
+                            </div>
+                            <input class="btn btn_addressSubmit_cart" type="submit" value="order Now" />
+                        </form>
+                        <% } else{ %>
+                            <!-- If not LOGIN display -->
+                            <a class="btn btn_addressSubmit_cart mt-2" href=" /login">Login to continue</a>
+                            <% } %>
+                </div>
+                <div class=" col-md-4"></div>
+            </div>
+
+            <% }else{ %>
+
+                <!-- For Empty Cart -->
+
+                <div class="container mt-5 emptycart">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+
+                                <div class="card-body cart">
+                                    <div class="col-sm-12 empty-cart-cls text-center"> <img src="img/emptyCart_cart.svg"
+                                            width="400" height="400" class="img-fluid mb-4 mr-3">
+                                        <h3><strong>Your Cart is Empty</strong></h3>
+                                        <h4>Add something to make me happy :)</h4> <a href="#"
+                                            class="btn btn-continueshop  cart-btn-transform m-3"
+                                            data-abc="true">continue
+                                            shopping</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <% } %>
+
+</section>

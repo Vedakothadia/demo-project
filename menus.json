@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "63e67ff81a25296181d5b319"
+  },
+  "name": "dark chocolate",
+  "image": "demo_cake.jpg",
+  "price": 750,
+  "size": "1kg"
+},{
+  "_id": {
+    "$oid": "63e67ff81a25296181d5b31a"
+  },
+  "name": "blackforest",
+  "image": "demo_cake.jpg",
+  "price": 750,
+  "size": "1kg"
+},{
+  "_id": {
+    "$oid": "63e67ff81a25296181d5b31b"
+  },
+  "name": "kesar pista",
+  "image": "demo_cake.jpg",
+  "price": 750,
+  "size": "1kg"
+},{
+  "_id": {
+    "$oid": "63e67ff81a25296181d5b31c"
+  },
+  "name": "Ras Malai",
+  "image": "demo_cake.jpg",
+  "price": 750,
+  "size": "1kg"
+}]

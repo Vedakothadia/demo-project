@@ -1,0 +1,72 @@
+<!-- Home section -->
+<section class="d-flex align-item-center" id="header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="mx-auto col-10">
+                <div class="row">
+                    <div class="col-md-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex justify-content-center flex-column">
+                        <h1>Grow your business with online e-CAKE
+                            <strong class="brand-name">Cakey pvt.</strong>
+                        </h1>
+                        <h2 class="my-3">
+                            We help to build and grow your career
+                        </h2>
+                        <div class="mt-3  mb-4">
+                            <a href="#" class="btn-get-started mb-2 mr-2">Get started</a>
+                            <a href="#contact" class="btn-get-started">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-1 order-lg-2 header-img">
+                        <img src="img/cake_home_index.svg" class="img-fluid animated" alt="Alphacent" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Home section END -->
+
+<!-- Product Section Start in Index file -->
+
+<div class="container productSection">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Trending <b>Products</b></h2>
+            <div class="row">
+                <% cakes.forEach(function(cakes){ %>
+
+
+                    <div class="col-sm-3">
+                        <div class="thumb-wrapper">
+                            <div class="img-box">
+                                <img src="/img/<%= cakes.image %>" class="img-fluid" alt="">
+                            </div>
+                            <div class="thumb-content">
+                                <h4>
+                                    <%= cakes.name %>
+                                </h4>
+                                <p class="item-price">₹ <span>
+                                        <%= cakes.price %>
+                                    </span></p>
+                                <p class="item-price">Size : <span>
+                                        <%= cakes.size %>
+                                    </span></p>
+                                <!-- <div class="star-rating">
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                    </ul>
+                                </div> -->
+                                <button data-addcartCake="<%= JSON.stringify(cakes) %>"
+                                    class="btn btn-primary addtocart_index">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <% }) %>
+            </div>
+        </div>
+    </div>
+</div>

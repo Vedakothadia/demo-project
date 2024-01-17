@@ -1,0 +1,26 @@
+<div class="container register_container">
+    <div class="card">
+        <div class="main">
+            <form action="/register" method="POST" enctype="application/json">
+
+                <div class="image"> <span><img src="https://imgur.com/sNwSvzv.png"></span> </div>
+                <% if(messages.error) { %>
+                    <div class="alert alert-danger mt-2 mb-2" role="alert">
+                        <%= messages.error %>
+                    </div>
+                    <% } %>
+                        <div class="input-text"> <input type="text" placeholder="Name" require="required"
+                                id="signup_name" name="name" value="<%= messages.name %>">
+                        </div>
+                        <div class="input-text"> <input type="email" placeholder="Email" require="required"
+                                id="signup_email" name="email" value="<%= messages.email %>">
+                        </div>
+                        <div class="input-text"> <input type="password" placeholder="Password" name="password"> </div>
+                        <div class="button"> <button class="next-btn" type="submit">Register</button> </div>
+                        <div class="heading text-center mt-3">
+                            <p>Already have account?<a href="/login"> Login </a></p>
+                        </div>
+            </form>
+        </div>
+    </div>
+</div>
